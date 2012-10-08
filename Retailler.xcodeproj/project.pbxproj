@@ -16,6 +16,13 @@
 		9B0EC96B1619DAF100FAB87F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B0EC96A1619DAF100FAB87F /* Default.png */; };
 		9B0EC96D1619DAF100FAB87F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B0EC96C1619DAF100FAB87F /* Default@2x.png */; };
 		9B0EC96F1619DAF100FAB87F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B0EC96E1619DAF100FAB87F /* Default-568h@2x.png */; };
+		9B0EC9BD1619E0EA00FAB87F /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0EC9BB1619E0EA00FAB87F /* OrdersViewController.m */; };
+		9B0EC9BE1619E0EA00FAB87F /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0EC9BC1619E0EA00FAB87F /* OrdersViewController.xib */; };
+		9B0EC9C21619E1B800FAB87F /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0EC9C01619E1B700FAB87F /* ProductsViewController.m */; };
+		9B0EC9C31619E1B800FAB87F /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0EC9C11619E1B700FAB87F /* ProductsViewController.xib */; };
+		9B0EC9CA1619E5B600FAB87F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B0EC9C91619E5B600FAB87F /* Localizable.strings */; };
+		9B0ECA46161C8C4F00FAB87F /* DetailOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0ECA44161C8C4E00FAB87F /* DetailOrderViewController.m */; };
+		9B0ECA47161C8C4F00FAB87F /* DetailOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0ECA45161C8C4E00FAB87F /* DetailOrderViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,16 @@
 		9B0EC96A1619DAF100FAB87F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9B0EC96C1619DAF100FAB87F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9B0EC96E1619DAF100FAB87F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9B0EC9BA1619E0EA00FAB87F /* OrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
+		9B0EC9BB1619E0EA00FAB87F /* OrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
+		9B0EC9BC1619E0EA00FAB87F /* OrdersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrdersViewController.xib; sourceTree = "<group>"; };
+		9B0EC9BF1619E1B700FAB87F /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
+		9B0EC9C01619E1B700FAB87F /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
+		9B0EC9C11619E1B700FAB87F /* ProductsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
+		9B0EC9C91619E5B600FAB87F /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9B0ECA43161C8C4E00FAB87F /* DetailOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailOrderViewController.h; sourceTree = "<group>"; };
+		9B0ECA44161C8C4E00FAB87F /* DetailOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailOrderViewController.m; sourceTree = "<group>"; };
+		9B0ECA45161C8C4E00FAB87F /* DetailOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailOrderViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0EC95E1619DAF100FAB87F /* Retailler */,
+				9B0EC9C81619E59400FAB87F /* Resources */,
 				9B0EC9571619DAF100FAB87F /* Frameworks */,
 				9B0EC9551619DAF100FAB87F /* Products */,
 			);
@@ -80,6 +98,10 @@
 			children = (
 				9B0EC9671619DAF100FAB87F /* AppDelegate.h */,
 				9B0EC9681619DAF100FAB87F /* AppDelegate.m */,
+				9B0EC9D31619E88E00FAB87F /* Orders */,
+				9B0EC9BF1619E1B700FAB87F /* ProductsViewController.h */,
+				9B0EC9C01619E1B700FAB87F /* ProductsViewController.m */,
+				9B0EC9C11619E1B700FAB87F /* ProductsViewController.xib */,
 				9B0EC95F1619DAF100FAB87F /* Supporting Files */,
 			);
 			path = Retailler;
@@ -97,6 +119,28 @@
 				9B0EC96E1619DAF100FAB87F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B0EC9C81619E59400FAB87F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B0EC9C91619E5B600FAB87F /* Localizable.strings */,
+			);
+			name = Resources;
+			path = Retailler;
+			sourceTree = "<group>";
+		};
+		9B0EC9D31619E88E00FAB87F /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				9B0EC9BA1619E0EA00FAB87F /* OrdersViewController.h */,
+				9B0EC9BB1619E0EA00FAB87F /* OrdersViewController.m */,
+				9B0EC9BC1619E0EA00FAB87F /* OrdersViewController.xib */,
+				9B0ECA43161C8C4E00FAB87F /* DetailOrderViewController.h */,
+				9B0ECA44161C8C4E00FAB87F /* DetailOrderViewController.m */,
+				9B0ECA45161C8C4E00FAB87F /* DetailOrderViewController.xib */,
+			);
+			name = Orders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +198,10 @@
 				9B0EC96B1619DAF100FAB87F /* Default.png in Resources */,
 				9B0EC96D1619DAF100FAB87F /* Default@2x.png in Resources */,
 				9B0EC96F1619DAF100FAB87F /* Default-568h@2x.png in Resources */,
+				9B0EC9BE1619E0EA00FAB87F /* OrdersViewController.xib in Resources */,
+				9B0EC9C31619E1B800FAB87F /* ProductsViewController.xib in Resources */,
+				9B0EC9CA1619E5B600FAB87F /* Localizable.strings in Resources */,
+				9B0ECA47161C8C4F00FAB87F /* DetailOrderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +214,9 @@
 			files = (
 				9B0EC9651619DAF100FAB87F /* main.m in Sources */,
 				9B0EC9691619DAF100FAB87F /* AppDelegate.m in Sources */,
+				9B0EC9BD1619E0EA00FAB87F /* OrdersViewController.m in Sources */,
+				9B0EC9C21619E1B800FAB87F /* ProductsViewController.m in Sources */,
+				9B0ECA46161C8C4F00FAB87F /* DetailOrderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +324,7 @@
 				9B0EC9741619DAF100FAB87F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
