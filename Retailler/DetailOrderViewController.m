@@ -16,6 +16,7 @@
 @implementation DetailOrderViewController
 
 @synthesize detailTableView;
+@synthesize footerView;
 
 NSMutableArray *detailsArray;
 NSMutableDictionary *detailsDictionary;
@@ -71,17 +72,35 @@ NSMutableDictionary *detailsDictionary;
     return [dict objectForKey:@"Nombre"];
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    
+    if (section == [detailsArray count] -1) {
+        return self.footerView;
+    
+    } else {
+        return nil;
+    }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    if (section == [detailsArray count] -1) {
+        return self.footerView.frame.size.height;
+
+    } else {
+        return 0.0;
+    }
+    
+}
 
 #pragma mark View Controller's.
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     UIBarButtonItem *addProduct = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addProduct:)];
     self.navigationItem.rightBarButtonItem = addProduct;
-    
-    
+
     
     
     detailsArray = [[NSMutableArray alloc] init];
@@ -112,7 +131,7 @@ NSMutableDictionary *detailsDictionary;
 
     
     p = [[Product alloc] init];
-    p.id_product = [NSNumber numberWithInt:00001];
+    p.id_product = [NSNumber numberWithInt:00003];
     p.name = @"iPad";
     
     [array addObject:p];

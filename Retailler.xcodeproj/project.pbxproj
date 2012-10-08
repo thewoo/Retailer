@@ -103,6 +103,7 @@
 				9B0EC9671619DAF100FAB87F /* AppDelegate.h */,
 				9B0EC9681619DAF100FAB87F /* AppDelegate.m */,
 				9B0EC9D31619E88E00FAB87F /* Orders */,
+				9B95D38A1623244100C26A63 /* Products */,
 				9B0EC9BF1619E1B700FAB87F /* ProductsViewController.h */,
 				9B0EC9C01619E1B700FAB87F /* ProductsViewController.m */,
 				9B0EC9C11619E1B700FAB87F /* ProductsViewController.xib */,
@@ -154,6 +155,13 @@
 				9B95D3841622E4D100C26A63 /* Product.m */,
 			);
 			name = Objetos;
+			sourceTree = "<group>";
+		};
+		9B95D38A1623244100C26A63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

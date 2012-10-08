@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *detailTableView;
 
+@property (nonatomic, strong) IBOutlet UIView *footerView;
+
 @end
