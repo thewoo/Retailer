@@ -7,6 +7,7 @@
 //
 
 #import "DetailOrderViewController.h"
+#import "Product.h"
 
 @interface DetailOrderViewController ()
 
@@ -16,17 +17,33 @@
 
 @synthesize detailTableView;
 
-NSArray *detailsArray;
+NSMutableArray *detailsArray;
+NSMutableDictionary *detailsDictionary;
+
+
+#pragma mark Actions.
+
+-(void)addProduct:(UIBarButtonItem *)barButton {
+    
+    NSLog(@"Add");
+}
+
+
 
 #pragma mark UITableView's DataSource / Delegate.
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    
+    return [detailsArray count];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 4;
+    
+    NSMutableDictionary *dict = [detailsArray objectAtIndex:section];
+        
+    return [[dict objectForKey:@"Productos"] count];
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -38,20 +55,74 @@ NSArray *detailsArray;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
+    NSMutableDictionary *dict = [detailsArray objectAtIndex:[indexPath section]];
     
+    Product *p = [[dict objectForKey:@"Productos"] objectAtIndex:[indexPath row]];
     
-    
+    cell.textLabel.text = p.name;
+    cell.textLabel.textAlignment = NSTextAlignmentRight;
     
     return cell;
 }
 
-
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+        
+    NSMutableDictionary *dict = [detailsArray objectAtIndex:section];    
+    return [dict objectForKey:@"Nombre"];
+}
 
 
 #pragma mark View Controller's.
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    UIBarButtonItem *addProduct = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addProduct:)];
+    self.navigationItem.rightBarButtonItem = addProduct;
+    
+    
+    
+    
+    detailsArray = [[NSMutableArray alloc] init];
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    NSMutableDictionary *diccionario = [[NSMutableDictionary alloc] init];
+    
+    Product *p = [[Product alloc] init];
+    p.id_product = [NSNumber numberWithInt:00001];
+    p.name = @"MacBook Pro";
+    
+    [array addObject:p];
+    
+    p = [[Product alloc] init];
+    p.id_product = [NSNumber numberWithInt:00002];
+    p.name = @"iPhone 5";
+    
+    [array addObject:p];
+    
+    [diccionario setObject:array forKey:@"Productos"];
+    [diccionario setObject:[NSString stringWithFormat:@"Jorge"] forKey:@"Nombre"];
+    
+    [detailsArray addObject:diccionario];
+    
+    
+    array = [[NSMutableArray alloc] init];
+    diccionario = [[NSMutableDictionary alloc] init];
+
+    
+    p = [[Product alloc] init];
+    p.id_product = [NSNumber numberWithInt:00001];
+    p.name = @"iPad";
+    
+    [array addObject:p];
+    
+    [diccionario setObject:array forKey:@"Productos"];
+    [diccionario setObject:[NSString stringWithFormat:@"María"] forKey:@"Nombre"];
+    
+    [detailsArray addObject:diccionario];
+    
+    
     
 }
 
