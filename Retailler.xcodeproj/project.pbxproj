@@ -26,6 +26,7 @@
 		9B95D3851622E4D100C26A63 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95D3841622E4D100C26A63 /* Product.m */; };
 		9B95D3C01625BD4C00C26A63 /* RetailerDB in Resources */ = {isa = PBXBuildFile; fileRef = 9B95D3BF1625BD4C00C26A63 /* RetailerDB */; };
 		9B95D3C81625BF1500C26A63 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95D3C71625BF1500C26A63 /* Order.m */; };
+		9B95D3CC1625C9CE00C26A63 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95D3CB1625C9CE00C26A63 /* SQLiteManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		9B95D3BF1625BD4C00C26A63 /* RetailerDB */ = {isa = PBXFileReference; lastKnownFileType = file; path = RetailerDB; sourceTree = "<group>"; };
 		9B95D3C61625BF1500C26A63 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		9B95D3C71625BF1500C26A63 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		9B95D3CA1625C9CE00C26A63 /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		9B95D3CB1625C9CE00C26A63 /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		9B0EC95E1619DAF100FAB87F /* Retailler */ = {
 			isa = PBXGroup;
 			children = (
+				9B95D3C91625C9A400C26A63 /* SQL */,
 				9B95D3811622E4B900C26A63 /* Objetos */,
 				9B0EC9671619DAF100FAB87F /* AppDelegate.h */,
 				9B0EC9681619DAF100FAB87F /* AppDelegate.m */,
@@ -170,6 +174,15 @@
 			children = (
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9B95D3C91625C9A400C26A63 /* SQL */ = {
+			isa = PBXGroup;
+			children = (
+				9B95D3CA1625C9CE00C26A63 /* SQLiteManager.h */,
+				9B95D3CB1625C9CE00C26A63 /* SQLiteManager.m */,
+			);
+			name = SQL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +262,7 @@
 				9B0ECA46161C8C4F00FAB87F /* DetailOrderViewController.m in Sources */,
 				9B95D3851622E4D100C26A63 /* Product.m in Sources */,
 				9B95D3C81625BF1500C26A63 /* Order.m in Sources */,
+				9B95D3CC1625C9CE00C26A63 /* SQLiteManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
