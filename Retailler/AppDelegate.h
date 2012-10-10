@@ -15,4 +15,8 @@
 @property (nonatomic, strong) UINavigationController *navController;
 
 
++(void)checkAndCopyFileWithName:(NSString *)name ofType:(NSString *)type;
+
+
+
 @end

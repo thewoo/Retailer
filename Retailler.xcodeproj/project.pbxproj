@@ -24,6 +24,8 @@
 		9B0ECA46161C8C4F00FAB87F /* DetailOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0ECA44161C8C4E00FAB87F /* DetailOrderViewController.m */; };
 		9B0ECA47161C8C4F00FAB87F /* DetailOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0ECA45161C8C4E00FAB87F /* DetailOrderViewController.xib */; };
 		9B95D3851622E4D100C26A63 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95D3841622E4D100C26A63 /* Product.m */; };
+		9B95D3C01625BD4C00C26A63 /* RetailerDB in Resources */ = {isa = PBXBuildFile; fileRef = 9B95D3BF1625BD4C00C26A63 /* RetailerDB */; };
+		9B95D3C81625BF1500C26A63 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95D3C71625BF1500C26A63 /* Order.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,9 @@
 		9B0ECA45161C8C4E00FAB87F /* DetailOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailOrderViewController.xib; sourceTree = "<group>"; };
 		9B95D3831622E4D100C26A63 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		9B95D3841622E4D100C26A63 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		9B95D3BF1625BD4C00C26A63 /* RetailerDB */ = {isa = PBXFileReference; lastKnownFileType = file; path = RetailerDB; sourceTree = "<group>"; };
+		9B95D3C61625BF1500C26A63 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		9B95D3C71625BF1500C26A63 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0EC9C91619E5B600FAB87F /* Localizable.strings */,
+				9B95D3BF1625BD4C00C26A63 /* RetailerDB */,
 			);
 			name = Resources;
 			path = Retailler;
@@ -153,6 +159,8 @@
 			children = (
 				9B95D3831622E4D100C26A63 /* Product.h */,
 				9B95D3841622E4D100C26A63 /* Product.m */,
+				9B95D3C61625BF1500C26A63 /* Order.h */,
+				9B95D3C71625BF1500C26A63 /* Order.m */,
 			);
 			name = Objetos;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 				9B0EC9C31619E1B800FAB87F /* ProductsViewController.xib in Resources */,
 				9B0EC9CA1619E5B600FAB87F /* Localizable.strings in Resources */,
 				9B0ECA47161C8C4F00FAB87F /* DetailOrderViewController.xib in Resources */,
+				9B95D3C01625BD4C00C26A63 /* RetailerDB in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +248,7 @@
 				9B0EC9C21619E1B800FAB87F /* ProductsViewController.m in Sources */,
 				9B0ECA46161C8C4F00FAB87F /* DetailOrderViewController.m in Sources */,
 				9B95D3851622E4D100C26A63 /* Product.m in Sources */,
+				9B95D3C81625BF1500C26A63 /* Order.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
