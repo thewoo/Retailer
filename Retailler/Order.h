@@ -10,6 +10,7 @@
 
 @interface Order : NSObject
 
-@property (nonatomic, strong) NSNumber *id_order;
+@property (nonatomic, strong) NSNumber *orderId;
+@property (nonatomic, strong) NSString *closeDate;
 
 @end

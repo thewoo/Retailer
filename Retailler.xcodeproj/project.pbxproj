@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0C3C141626B00600656FE7 /* Retailer.db in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C3C131626B00600656FE7 /* Retailer.db */; };
+		9B0C3C171626B08800656FE7 /* OrdersDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C3C161626B08800656FE7 /* OrdersDAO.m */; };
+		9B0C3C191626B43C00656FE7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0C3C181626B43B00656FE7 /* libsqlite3.0.dylib */; };
 		9B0EC9591619DAF100FAB87F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0EC9581619DAF100FAB87F /* UIKit.framework */; };
 		9B0EC95B1619DAF100FAB87F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0EC95A1619DAF100FAB87F /* Foundation.framework */; };
 		9B0EC95D1619DAF100FAB87F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0EC95C1619DAF100FAB87F /* CoreGraphics.framework */; };
@@ -24,12 +27,17 @@
 		9B0ECA46161C8C4F00FAB87F /* DetailOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0ECA44161C8C4E00FAB87F /* DetailOrderViewController.m */; };
 		9B0ECA47161C8C4F00FAB87F /* DetailOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0ECA45161C8C4E00FAB87F /* DetailOrderViewController.xib */; };
 		9B95D3851622E4D100C26A63 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95D3841622E4D100C26A63 /* Product.m */; };
-		9B95D3C01625BD4C00C26A63 /* RetailerDB in Resources */ = {isa = PBXBuildFile; fileRef = 9B95D3BF1625BD4C00C26A63 /* RetailerDB */; };
 		9B95D3C81625BF1500C26A63 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95D3C71625BF1500C26A63 /* Order.m */; };
 		9B95D3CC1625C9CE00C26A63 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95D3CB1625C9CE00C26A63 /* SQLiteManager.m */; };
+		9BDF15791626DEBC00AF6119 /* ClientOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF15781626DEBC00AF6119 /* ClientOrder.m */; };
+		9BDF158916270A2E00AF6119 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF158816270A2E00AF6119 /* Client.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B0C3C131626B00600656FE7 /* Retailer.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Retailer.db; sourceTree = "<group>"; };
+		9B0C3C151626B08800656FE7 /* OrdersDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersDAO.h; sourceTree = "<group>"; };
+		9B0C3C161626B08800656FE7 /* OrdersDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersDAO.m; sourceTree = "<group>"; };
+		9B0C3C181626B43B00656FE7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		9B0EC9541619DAF100FAB87F /* Retailler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Retailler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0EC9581619DAF100FAB87F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9B0EC95A1619DAF100FAB87F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,11 +63,14 @@
 		9B0ECA45161C8C4E00FAB87F /* DetailOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailOrderViewController.xib; sourceTree = "<group>"; };
 		9B95D3831622E4D100C26A63 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		9B95D3841622E4D100C26A63 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
-		9B95D3BF1625BD4C00C26A63 /* RetailerDB */ = {isa = PBXFileReference; lastKnownFileType = file; path = RetailerDB; sourceTree = "<group>"; };
 		9B95D3C61625BF1500C26A63 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		9B95D3C71625BF1500C26A63 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		9B95D3CA1625C9CE00C26A63 /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
 		9B95D3CB1625C9CE00C26A63 /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		9BDF15771626DEBC00AF6119 /* ClientOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientOrder.h; sourceTree = "<group>"; };
+		9BDF15781626DEBC00AF6119 /* ClientOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientOrder.m; sourceTree = "<group>"; };
+		9BDF158716270A2D00AF6119 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		9BDF158816270A2E00AF6119 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B0C3C191626B43C00656FE7 /* libsqlite3.0.dylib in Frameworks */,
 				9B0EC9591619DAF100FAB87F /* UIKit.framework in Frameworks */,
 				9B0EC95B1619DAF100FAB87F /* Foundation.framework in Frameworks */,
 				9B0EC95D1619DAF100FAB87F /* CoreGraphics.framework in Frameworks */,
@@ -97,6 +109,7 @@
 		9B0EC9571619DAF100FAB87F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B0C3C181626B43B00656FE7 /* libsqlite3.0.dylib */,
 				9B0EC9581619DAF100FAB87F /* UIKit.framework */,
 				9B0EC95A1619DAF100FAB87F /* Foundation.framework */,
 				9B0EC95C1619DAF100FAB87F /* CoreGraphics.framework */,
@@ -139,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0EC9C91619E5B600FAB87F /* Localizable.strings */,
-				9B95D3BF1625BD4C00C26A63 /* RetailerDB */,
+				9B0C3C131626B00600656FE7 /* Retailer.db */,
 			);
 			name = Resources;
 			path = Retailler;
@@ -161,10 +174,14 @@
 		9B95D3811622E4B900C26A63 /* Objetos */ = {
 			isa = PBXGroup;
 			children = (
-				9B95D3831622E4D100C26A63 /* Product.h */,
-				9B95D3841622E4D100C26A63 /* Product.m */,
 				9B95D3C61625BF1500C26A63 /* Order.h */,
 				9B95D3C71625BF1500C26A63 /* Order.m */,
+				9BDF15771626DEBC00AF6119 /* ClientOrder.h */,
+				9BDF15781626DEBC00AF6119 /* ClientOrder.m */,
+				9B95D3831622E4D100C26A63 /* Product.h */,
+				9B95D3841622E4D100C26A63 /* Product.m */,
+				9BDF158716270A2D00AF6119 /* Client.h */,
+				9BDF158816270A2E00AF6119 /* Client.m */,
 			);
 			name = Objetos;
 			sourceTree = "<group>";
@@ -181,6 +198,8 @@
 			children = (
 				9B95D3CA1625C9CE00C26A63 /* SQLiteManager.h */,
 				9B95D3CB1625C9CE00C26A63 /* SQLiteManager.m */,
+				9B0C3C151626B08800656FE7 /* OrdersDAO.h */,
+				9B0C3C161626B08800656FE7 /* OrdersDAO.m */,
 			);
 			name = SQL;
 			sourceTree = "<group>";
@@ -244,7 +263,7 @@
 				9B0EC9C31619E1B800FAB87F /* ProductsViewController.xib in Resources */,
 				9B0EC9CA1619E5B600FAB87F /* Localizable.strings in Resources */,
 				9B0ECA47161C8C4F00FAB87F /* DetailOrderViewController.xib in Resources */,
-				9B95D3C01625BD4C00C26A63 /* RetailerDB in Resources */,
+				9B0C3C141626B00600656FE7 /* Retailer.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +282,9 @@
 				9B95D3851622E4D100C26A63 /* Product.m in Sources */,
 				9B95D3C81625BF1500C26A63 /* Order.m in Sources */,
 				9B95D3CC1625C9CE00C26A63 /* SQLiteManager.m in Sources */,
+				9B0C3C171626B08800656FE7 /* OrdersDAO.m in Sources */,
+				9BDF15791626DEBC00AF6119 /* ClientOrder.m in Sources */,
+				9BDF158916270A2E00AF6119 /* Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

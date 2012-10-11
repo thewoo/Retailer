@@ -37,6 +37,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    [AppDelegate checkAndCopyFileWithName:@"Retailer" ofType:@"db"];
+    
     self.navController = [[UINavigationController alloc] init];
     [self.navController.navigationBar setBarStyle:UIBarStyleBlack];
     

@@ -10,4 +10,7 @@
 
 @implementation Order
 
+@synthesize orderId;
+@synthesize closeDate;
+
 @end

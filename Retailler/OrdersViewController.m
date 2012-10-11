@@ -8,16 +8,18 @@
 
 #import "OrdersViewController.h"
 #import "DetailOrderViewController.h"
+#import "OrdersDAO.h"
+#import "Order.h"
 
 @interface OrdersViewController ()
 
 @end
-
 NSArray *fechas;
 
 @implementation OrdersViewController
 
 @synthesize ordersTableView;
+@synthesize ordersArray;
 
 
 #pragma mark Actions.
@@ -37,7 +39,7 @@ NSArray *fechas;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return [ordersArray count];
 }
 
 
@@ -49,7 +51,17 @@ NSArray *fechas;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-    cell.textLabel.text = [fechas objectAtIndex:[indexPath row]];
+    Order *order = [ordersArray objectAtIndex:[indexPath row]];
+    NSString *cellText;
+    
+    if ((NSNull *)order.closeDate == [NSNull null] || [order.closeDate length] == 0) {
+        cellText = [order.orderId stringValue];
+    
+    } else {
+        cellText = order.closeDate;
+    }
+    
+    cell.textLabel.text = cellText;
     
     return cell;
 }
@@ -60,6 +72,8 @@ NSArray *fechas;
     
     [super viewDidLoad];
     
+    self.ordersArray = [OrdersDAO getAllOrders];
+    
     fechas = [[NSArray alloc] initWithObjects:@"17/12/2012", @"01 de Septiembre 2012", @"18 de Agosto 1992", nil];
     
     UIBarButtonItem *newOrderButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newOrder:)];
@@ -69,15 +83,14 @@ NSArray *fechas;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
-    if (self) {
-    }
+    if (self) {}
+    
     return self;
 }
 

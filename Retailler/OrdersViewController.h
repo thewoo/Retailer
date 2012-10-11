@@ -11,5 +11,6 @@
 @interface OrdersViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) IBOutlet UITableView *ordersTableView;
+@property (nonatomic, strong) NSMutableArray *ordersArray;
 
 @end

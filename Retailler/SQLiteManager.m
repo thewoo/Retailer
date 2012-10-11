@@ -16,12 +16,23 @@ sqlite3 *connection = nil;
 +(void)openConnection {
     
     NSString *roothPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *dataBasePath = [roothPath stringByAppendingPathComponent:@"RetailerDB"];
+    NSString *dataBasePath = [roothPath stringByAppendingPathComponent:@"Retailer.db"];
     
-    if (sqlite3_open([dataBasePath UTF8String], &connection) != SQLITE_OK) {
-        NSLog(@"[SQLiteManager] No se pudo hacer la conexión con la base de datos: RetailerDB");
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:dataBasePath]) {
+        
+        if (sqlite3_open([dataBasePath UTF8String], &connection) != SQLITE_OK) {
+            NSLog(@"[SQLiteManager] No se pudo hacer la conexión con la base de datos: Retailer.db");
+        }
+        
+    } else {        
+        NSLog(@"[SQLiteManager] No se encuentra la base de datos en el sistema de archivos.");
     }
+    
+    
 }
+
+
 
 +(void)closeConnection {
     
@@ -31,10 +42,6 @@ sqlite3 *connection = nil;
     }
 }
 
-
-
-
-
 +(sqlite3 *)getConnection {    
     
     if (connection == nil) {
@@ -42,7 +49,6 @@ sqlite3 *connection = nil;
     }
     
     return  connection;
-    
 }
 
 @end
