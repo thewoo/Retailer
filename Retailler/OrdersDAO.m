@@ -17,7 +17,7 @@
     NSMutableArray *ordersArray = [[NSMutableArray alloc] init];
     Order *order;
     
-    char *sql = "Select * from Orders ORDER BY id_order desc";
+    char *sql = "Select * from Orders order by id_order desc";
     sqlite3_stmt *sqlStatement;
     
     if (sqlite3_prepare_v2([SQLiteManager getConnection], sql, -1, &sqlStatement, NULL) == SQLITE_OK) {
@@ -60,6 +60,8 @@
         
     }
     
+    [SQLiteManager closeConnection];
+
     return clientsIDs;
     
 }
@@ -87,6 +89,9 @@
         
         NSLog(@"[OrdersDAO] getClientsOrdersWithOrderId - Error: %s", sqlite3_errmsg([SQLiteManager getConnection]));
     }
+    
+    
+    [SQLiteManager closeConnection];
     
     return clientsOrders;
 }

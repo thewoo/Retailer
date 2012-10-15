@@ -30,12 +30,12 @@
     
     if (![ProductsDAO addNewProduct:product]) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alerta" message:@"No se ha podido guardar el producto. Y este texto no está localizado." delegate:self cancelButtonTitle:@"Demonios!" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alerta" message:@"No se ha podido guardar el producto. Y este texto no tiene i18N." delegate:self cancelButtonTitle:@"Demonios!" otherButtonTitles:nil, nil];
         
         [alert show];
     }
     
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -57,7 +57,7 @@
     [super viewDidLoad];
     
     self.nameTextField.placeholder = NSLocalizedString(@"newProductViewController.textField.name", nil);
-    self.brandTextField.placeholder = NSLocalizedString(@"newProductViewController.textField.brand",  nil);
+    self.brandTextField.placeholder = NSLocalizedString(@"newProductViewController.textField.brand", nil);
     self.modelTextField.placeholder = NSLocalizedString(@"newProductViewController.textField.model", nil);
     self.priceTextField.placeholder = NSLocalizedString(@"newProductViewController.textField.price", nil);
 
