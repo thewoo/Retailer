@@ -12,7 +12,9 @@
 
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) UITabBarController *tabBarController;
-@property (nonatomic, strong) UINavigationController *navController;
+
+@property (nonatomic, strong) UINavigationController *ordersNavController;
+@property (nonatomic, strong) UINavigationController *productsNavController;
 
 
 +(void)checkAndCopyFileWithName:(NSString *)name ofType:(NSString *)type;

@@ -2,3 +2,17 @@
 /* Orders View Controller */
 
 "ordersViewController.title" = "Pedidos";
+
+
+
+/* Products View Controller */
+
+"productsViewController.title" = "Productos";
+
+
+/* New Products View Controller */
+
+"newProductViewController.textField.name" = "Nombre";
+"newProductViewController.textField.brand" = "Marca";
+"newProductViewController.textField.model" = "Modelo";
+"newProductViewController.textField.price" = "Precio";

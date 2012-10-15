@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *brand;
 @property (nonatomic, strong) NSString *model;
+@property (nonatomic, strong) NSNumber *price;
 
 
 @end

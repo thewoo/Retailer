@@ -14,6 +14,7 @@
 @synthesize name;
 @synthesize brand;
 @synthesize model;
+@synthesize price;
 
 
 

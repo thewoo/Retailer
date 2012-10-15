@@ -51,9 +51,14 @@
     
     NSMutableArray *clientsIDs = [[NSMutableArray alloc] init];
     
-    NSString *sqlString = [NSString stringWithFormat:@"Select distinct id_client from ClientOrders where id_order = %@", orderId];
+    NSString *sqlString = [NSString stringWithFormat:@"Select Clients.name, Products.name, ClientOrders.quantity from ClientOrders  inner join Clients on ClientOrders.id_client = Clients.id_client inner join Products on ClientOrders.id_product = Products.id_product where id_order = %@", orderId];
     
+    const char *sql = [sqlString UTF8String];
+    sqlite3_stmt *sqlStatement;
     
+    if (sqlite3_prepare([SQLiteManager getConnection], sql, -1, &sqlStatement, NULL) == SQLITE_OK) {
+        
+    }
     
     return clientsIDs;
     

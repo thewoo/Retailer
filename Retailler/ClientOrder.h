@@ -11,6 +11,9 @@
 
 @interface ClientOrder : NSObject
 
-@property (nonatomic, strong) Client *client;
+@property (nonatomic, strong) NSNumber *idClientOrder;
+@property (nonatomic, strong) NSString *clientName;
+@property (nonatomic, strong) NSString *productName;
+@property (nonatomic, strong) NSNumber *orderPrice;
 
 @end

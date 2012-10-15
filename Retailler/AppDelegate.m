@@ -39,18 +39,29 @@
     
     [AppDelegate checkAndCopyFileWithName:@"Retailer" ofType:@"db"];
     
-    self.navController = [[UINavigationController alloc] init];
-    [self.navController.navigationBar setBarStyle:UIBarStyleBlack];
+    
+    self.ordersNavController = [[UINavigationController alloc] init];
+    [self.ordersNavController.navigationBar setBarStyle:UIBarStyleBlack];
     
     OrdersViewController *ordersViewController = [[OrdersViewController alloc] initWithNibName:@"OrdersViewController" bundle:nil];
     ordersViewController.title = NSLocalizedString(@"ordersViewController.title", nil);
     
-    [self.navController pushViewController:ordersViewController animated:NO];
+    [self.ordersNavController pushViewController:ordersViewController animated:NO];
+    
+    
+    
+    self.productsNavController = [[UINavigationController alloc] init];
+    [self.productsNavController.navigationBar setBarStyle:UIBarStyleBlack];
     
     ProductsViewController *productsViewController = [[ProductsViewController alloc] initWithNibName:@"ProductsViewController" bundle:nil];
+    productsViewController.title = NSLocalizedString(@"productsViewController.title", nil);
+    
+    [self.productsNavController pushViewController:productsViewController animated:NO];
+    
+    
     
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[self.navController, productsViewController];
+    self.tabBarController.viewControllers = @[self.ordersNavController, self.productsNavController];
     
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];

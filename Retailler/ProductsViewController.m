@@ -7,6 +7,7 @@
 //
 
 #import "ProductsViewController.h"
+#import "NewProductViewController.h"
 
 @interface ProductsViewController ()
 
@@ -14,25 +15,39 @@
 
 @implementation ProductsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+
+#pragma mark IBActions.
+
+-(void)addNewProduc:(id)sender {
+    
+    NewProductViewController *newProductViewController = [[NewProductViewController alloc] initWithNibName:@"NewProductViewController" bundle:nil];
+    [self.navigationController pushViewController:newProductViewController animated:YES];
+    
 }
 
-- (void)viewDidLoad
-{
+
+#pragma mark ViewController's.
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    UIBarButtonItem *newProductButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewProduc:)];
+    self.navigationItem.rightBarButtonItem = newProductButton;    
+    
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {}
+    return self;
 }
 
 @end
