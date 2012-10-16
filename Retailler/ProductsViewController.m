@@ -8,6 +8,7 @@
 
 #import "ProductsViewController.h"
 #import "NewProductViewController.h"
+#import "ProductsDAO.h"
 
 @interface ProductsViewController ()
 
@@ -15,6 +16,8 @@
 
 @implementation ProductsViewController
 
+@synthesize productsTableView;
+@synthesize producstArray;
 
 #pragma mark IBActions.
 
@@ -26,13 +29,54 @@
 }
 
 
+
+#pragma mark UITableView's Deletega & DataSource.
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [producstArray count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if (cell == nil) {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
+    }
+    
+    Product *p = [producstArray objectAtIndex:[indexPath row]];
+    
+    cell.textLabel.text = p.name;
+    cell.detailTextLabel.text = p.model;
+    
+    return cell;
+
+}
+
+
+
 #pragma mark ViewController's.
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    self.producstArray = [ProductsDAO getAllProducts];
+    [self.productsTableView reloadData];
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     UIBarButtonItem *newProductButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewProduc:)];
-    self.navigationItem.rightBarButtonItem = newProductButton;    
+    self.navigationItem.rightBarButtonItem = newProductButton;
     
     
 }

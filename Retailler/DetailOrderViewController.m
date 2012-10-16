@@ -109,13 +109,13 @@ NSMutableDictionary *detailsDictionary;
     NSMutableDictionary *diccionario = [[NSMutableDictionary alloc] init];
     
     Product *p = [[Product alloc] init];
-    p.id_product = [NSNumber numberWithInt:00001];
+    p.productId = [NSNumber numberWithInt:00001];
     p.name = @"MacBook Pro";
     
     [array addObject:p];
     
     p = [[Product alloc] init];
-    p.id_product = [NSNumber numberWithInt:00002];
+    p.productId = [NSNumber numberWithInt:00002];
     p.name = @"iPhone 5";
     
     [array addObject:p];
@@ -131,7 +131,7 @@ NSMutableDictionary *detailsDictionary;
 
     
     p = [[Product alloc] init];
-    p.id_product = [NSNumber numberWithInt:00003];
+    p.productId = [NSNumber numberWithInt:00003];
     p.name = @"iPad";
     
     [array addObject:p];

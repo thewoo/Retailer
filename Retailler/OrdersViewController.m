@@ -14,7 +14,6 @@
 @interface OrdersViewController ()
 
 @end
-NSArray *fechas;
 
 @implementation OrdersViewController
 
@@ -47,7 +46,7 @@ NSArray *fechas;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    if (cell == nil) {        
+    if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
@@ -56,7 +55,7 @@ NSArray *fechas;
     
     if ((NSNull *)order.closeDate == [NSNull null] || [order.closeDate length] == 0) {
         cellText = [order.orderId stringValue];
-    
+        
     } else {
         cellText = order.closeDate;
     }
@@ -73,8 +72,6 @@ NSArray *fechas;
     [super viewDidLoad];
     
     self.ordersArray = [OrdersDAO getAllOrders];
-    
-    fechas = [[NSArray alloc] initWithObjects:@"17/12/2012", @"01 de Septiembre 2012", @"18 de Agosto 1992", nil];
     
     UIBarButtonItem *newOrderButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newOrder:)];
     self.navigationItem.rightBarButtonItem = newOrderButton;

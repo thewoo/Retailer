@@ -21,23 +21,32 @@
 
 -(IBAction)addProductButtonPressed:(id)sender {
     
-    Product *product = [[Product alloc] init];
-    
-    product.name = self.nameTextField.text;
-    product.brand = self.brandTextField.text;
-    product.model = self.modelTextField.text;
-    product.price = [NSNumber numberWithInt:[self.priceTextField.text intValue]];
-    
-    if (![ProductsDAO addNewProduct:product]) {
+    if ([self.nameTextField.text length] > 0 && [self.brandTextField.text length] > 0 &&
+        [self.modelTextField.text length] > 0 && [self.priceTextField.text length] > 0) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alerta" message:@"No se ha podido guardar el producto. Y este texto no tiene i18N." delegate:self cancelButtonTitle:@"Demonios!" otherButtonTitles:nil, nil];
+        Product *product = [[Product alloc] init];
+        
+        product.name = self.nameTextField.text;
+        product.brand = self.brandTextField.text;
+        product.model = self.modelTextField.text;
+        product.price = [NSNumber numberWithInt:[self.priceTextField.text intValue]];
+        
+        if ([ProductsDAO addNewProduct:product]) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        
+        
+    } else {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"newProductViewController.alert.title", nil)
+                                                  message:NSLocalizedString(@"newProductViewController.alert.message", nil)
+                                                  delegate:self cancelButtonTitle:NSLocalizedString(@"newProductViewController.alert.button", nil)
+                                                  otherButtonTitles:nil, nil];
+        
         
         [alert show];
     }
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 
 #pragma mark UITextField's Delegate.

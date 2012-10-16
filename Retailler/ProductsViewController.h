@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProductsViewController : UIViewController
+@interface ProductsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) IBOutlet UITableView *productsTableView;
+@property (nonatomic, strong) NSMutableArray *producstArray;
 
 
 @end

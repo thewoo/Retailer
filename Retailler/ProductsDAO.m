@@ -12,6 +12,38 @@
 
 @implementation ProductsDAO
 
++(NSMutableArray *)getAllProducts {
+    
+    NSMutableArray *productsArray = [[NSMutableArray alloc] init];
+    Product *product;
+    
+    char *sql = "Select * from Products";
+    sqlite3_stmt *sqlStatement;
+    
+    
+    if (sqlite3_prepare([SQLiteManager getConnection], sql, -1, &sqlStatement, NULL) == SQLITE_OK) {
+        
+        while (sqlite3_step(sqlStatement) == SQLITE_ROW) {
+            
+            product = [[Product alloc] init];
+            product.productId = [NSNumber numberWithInt:(sqlite3_column_int(sqlStatement, 0))];
+            product.name = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 1)];
+            product.brand = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 2)];
+            product.model = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
+            product.price = [NSNumber numberWithInt:(sqlite3_column_int(sqlStatement, 4))];
+            
+            [productsArray addObject:product];
+            
+        }
+        
+    }
+    
+    [SQLiteManager closeConnection];
+    
+    return productsArray;
+}
+
+
 
 +(BOOL)addNewProduct:(Product *)product {
     

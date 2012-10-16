@@ -10,7 +10,7 @@
 
 @implementation Product
 
-@synthesize id_product;
+@synthesize productId;
 @synthesize name;
 @synthesize brand;
 @synthesize model;

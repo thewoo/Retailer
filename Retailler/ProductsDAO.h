@@ -13,6 +13,7 @@
 @interface ProductsDAO : NSObject
 
 
++(NSMutableArray *)getAllProducts;
 +(BOOL)addNewProduct:(Product *)product;
 
 

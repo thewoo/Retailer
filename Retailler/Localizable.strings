@@ -16,3 +16,7 @@
 "newProductViewController.textField.brand" = "Marca";
 "newProductViewController.textField.model" = "Modelo";
 "newProductViewController.textField.price" = "Precio";
+
+"newProductViewController.alert.title" = "Ay, ay!";
+"newProductViewController.alert.message" = "Rellena todos los campos, anda.";
+"newProductViewController.alert.button" = "Uy, perdón";
