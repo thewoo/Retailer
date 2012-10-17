@@ -47,29 +47,61 @@
 
 +(BOOL)addNewProduct:(Product *)product {
     
-    BOOL succes = NO;
+    BOOL success = NO;
     NSString *queryString = [NSString stringWithFormat:@"Insert into Products values (null, '%@', '%@', '%@', %@)", product.name, product.brand, product.model, product.price];
     
     const char *sql = [queryString UTF8String];
     sqlite3_stmt *insertStmt;
     
-    if (sqlite3_prepare_v2([SQLiteManager getConnection], sql, -1, &insertStmt, NULL) != SQLITE_OK) {
+    if (sqlite3_prepare_v2([SQLiteManager getConnection], sql, -1, &insertStmt, NULL) == SQLITE_OK) {
+        
+        if (sqlite3_step(insertStmt) == SQLITE_DONE) {
+            success = YES;
+            sqlite3_finalize(insertStmt);
+            
+        } else {
+            NSLog(@"[ProductsDAO] addNewProduct. Error with Insertion: %s", sqlite3_errmsg([SQLiteManager getConnection]));
+        }
+        
+    } else {        
         NSLog(@"[ProductsDAO] addNewProduct. Error with Statement: %s", sqlite3_errmsg([SQLiteManager getConnection]));
     }
-    
-    if (sqlite3_step(insertStmt) == SQLITE_DONE) {
-        succes = YES;
-        sqlite3_finalize(insertStmt);
-        
-    } else {
-        NSLog(@"[ProductsDAO] addNewProduct. Error with Insertion: %s", sqlite3_errmsg([SQLiteManager getConnection]));
-    }
-    
     
 
     [SQLiteManager closeConnection];
     
-    return succes;
+    return success; 
+}
+
+
++(BOOL)updateProduct:(Product *)product {
+    
+    BOOL success = NO;
+    
+    NSString *queryString = [NSString stringWithFormat:@"Update Products set name='%@', brand='%@', model='%@', price='%@' where id_product=%@", product.name, product.brand, product.model, product.price, product.productId];
+    
+    const char *sql = [queryString UTF8String];
+    sqlite3_stmt *updateStmt;
+    
+    
+    if (sqlite3_prepare_v2([SQLiteManager getConnection], sql, -1, &updateStmt, NULL) == SQLITE_OK) {
+        
+        if (sqlite3_step(updateStmt) == SQLITE_DONE) {
+            success = YES;
+            sqlite3_finalize(updateStmt);
+            
+        } else {
+            NSLog(@"[ProductsDAO] updateProduct. Error while Updating: %s", sqlite3_errmsg([SQLiteManager getConnection]));
+        }
+        
+    } else {        
+        NSLog(@"[ProductsDAO] updateProduct: Error with Statement: %s", sqlite3_errmsg([SQLiteManager getConnection]));
+    }
+    
+    
+    [SQLiteManager closeConnection];
+    
+    return success;
 }
 
 

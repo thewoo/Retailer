@@ -20,3 +20,6 @@
 "newProductViewController.alert.title" = "Ay, ay!";
 "newProductViewController.alert.message" = "Rellena todos los campos, anda.";
 "newProductViewController.alert.button" = "Uy, perdón";
+
+"newProductViewController.button.add" = "Añadir";
+"newProductViewController.button.update" = "Actualizar";

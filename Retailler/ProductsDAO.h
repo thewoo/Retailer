@@ -14,7 +14,9 @@
 
 
 +(NSMutableArray *)getAllProducts;
+
 +(BOOL)addNewProduct:(Product *)product;
++(BOOL)updateProduct:(Product *)product;
 
 
 

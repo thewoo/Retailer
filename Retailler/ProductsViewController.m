@@ -57,9 +57,16 @@
     cell.detailTextLabel.text = p.model;
     
     return cell;
-
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NewProductViewController *newProductViewController = [[NewProductViewController alloc] initWithNibName:@"NewProductViewController" bundle:nil];
+    newProductViewController.product = [producstArray objectAtIndex:[indexPath row]];
+    
+    [self.navigationController pushViewController:newProductViewController animated:YES];    
+}
 
 
 #pragma mark ViewController's.

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Product.h"
 
 @interface NewProductViewController : UIViewController <UITextFieldDelegate>
 
@@ -16,8 +17,12 @@
 @property (nonatomic, strong) IBOutlet UITextField *priceTextField;
 
 @property (nonatomic, strong) IBOutlet UIButton *addProductButton;
+@property (nonatomic, strong) IBOutlet UIButton *updateProductButton;
+
+@property (nonatomic, strong) Product *product;
 
 
 -(IBAction)addProductButtonPressed:(id)sender;
+-(IBAction)updateProductButtonPressed:(id)sender;
 
 @end
